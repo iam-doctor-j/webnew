@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barriecito', cursive;
+}
+
+.nav-container{
+    position: relative;   
+    display: flex;
+    height: 10vh;
+    background-color: lightblue;
+    align-items: center;
+    border-bottom: solid 2px black;
+}
+
+.nav-brand-title{
+    font-size: 2.5rem;
+    color: blue;
+    text-shadow: 5px 5px 6px darkblue;
+    margin: 10px;
+    margin-left: 30px;
+    -webkit-text-stroke: 1px black;
+}
+
+.nav-brand{
+    flex: 1;
+}
+
+.nav-links{
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+}
+
+.nav-link{
+    list-style: none;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: blue;
+    font-size: 1.5rem;
+    text-shadow: 5px 5px 6px darkblue;
+    -webkit-text-stroke: 1px black;
+}
+
+.fa{
+    font-size: 2.5rem;
+    color: blue;
+    text-shadow: 5px 5px 6px darkblue;
+    margin: 10px;
+    margin-left: 30px;
+    -webkit-text-stroke: 1px black;
+}
+
+.fa:hover{
+    transition: all 1s ease-in-out;
+    transform: rotate(720deg);
+    cursor: pointer;
+}
+
+.hamburger{
+    display: none;
+}
+
+.hamburger:hover{
+    cursor: pointer;
+}
+
+.upper{
+    transform: translateY(5px) rotate(45deg);
+}
+
+.middle{
+    display: none;
+}
+
+.bottom{
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+.line{
+    transform-origin: center;
+    transition: all 200ms ease-in;
+    width: 30px;
+    height: 5px;
+    background-color: blue;
+    margin: 5px;
+    border: solid 1px black;
+}
+
+@media screen and (max-width: 780px){
+    .nav-brand-title{
+        display: none;
+    }
+    .nav-brand{
+        position: absolute;        
+        left: 5%;
+        top: 10%;
+        transform: translateY(-10%);
+    }
+    .disp{
+        display: none;
+    }
+    .fa{
+        font-size: 5rem;
+    }
+    .nav-container{
+        height: 100vh;
+        width: 70%;
+        margin-left: auto;
+        border-bottom: none;
+        border-left: solid 1px black;
+        flex-direction: column;
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        transform: translate(5%, -5%);
+        z-index: 2;
+    }
+    .nav-links{
+        flex-direction: column;
+        flex: 4;
+    }
+}
