@@ -15,6 +15,7 @@ body{
     background-color: lightblue;
     align-items: center;
     border-bottom: solid 2px black;
+    z-index: 1;
 }
 
 .nav-brand-title{
